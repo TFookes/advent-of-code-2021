@@ -1,6 +1,3 @@
-from typing import final
-
-
 digits = {
     2: 1,
     4: 4,
