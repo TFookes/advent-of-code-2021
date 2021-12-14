@@ -1,8 +1,14 @@
 #!/bin/bash
 
-DAY=$( date | awk ' { print $2 } ' )
+DAY="$( date | awk ' { print $2 } ' )"
+DAYSTR="day$DAY"
 echo "Pulling input for day $DAY"
-OUTPUT="./$DAY.txt"
+mkdir "$DAYSTR"
+cp "./template.py" "$DAYSTR/1.py"
+cp "./template.py" "$DAYSTR/2.py"
+touch "$DAYSTR/inputs.txt"
+touch "$DAYSTR/test_inputs.txt"
+OUTPUT="$DAYSTR/inputs.txt"
 echo "Writing to file: $OUTPUT"
 
 URL="https://adventofcode.com/2021/day/$DAY/input"
