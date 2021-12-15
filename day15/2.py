@@ -70,8 +70,8 @@ if __name__ == "__main__":
                 maxx = str(j)
             maxy = str(i)
 
-        path = nx.shortest_path(risks_graph, '0,0', maxx + "," + maxy, weight='weight')
+        path = nx.dijkstra_path(risks_graph, '0,0', maxx + "," + maxy, weight='weight')
         print(path)
-        print(nx.shortest_path_length(risks_graph, '0,0', maxx + "," + maxy, weight='weight'))
+        print(nx.dijkstra_path_length(risks_graph, '0,0', maxx + "," + maxy, weight='weight'))
     
 
